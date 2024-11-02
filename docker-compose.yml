@@ -1,0 +1,17 @@
+version: "3.8"
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/var/www/html
+      - notes_data:/_tmp
+    ports:
+      - "8080:80"
+    environment:
+      - SAVE_PATH=/_tmp
+
+volumes:
+  notes_data:
