@@ -12,6 +12,7 @@ services:
       - "8086:80"
     environment:
       - SAVE_PATH=/_tmp
+    restart: always
 
 volumes:
   notes_data:
